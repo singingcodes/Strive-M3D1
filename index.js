@@ -251,22 +251,22 @@ const stringToNumber = function (num) {
   }
   return newNum;
 };
-console.log(stringToNumber("28"));
+console.log(stringToNumber("30"));
 /*  
-
-
-
-
-
-
-
-
-
- 
-
-
 
 20)
 Create a function that given a phrase returns its acronym, like British Broadcasting Corporation returns BBC
 
 */
+const acronym = function (str) {
+  let newStr = str.split(" ");
+  let acrPhrase = "";
+  newStr.forEach((el) => {
+    const [char] = el;
+    if (char === char.toUpperCase() && char !== char.toLowerCase()) {
+      acrPhrase += char;
+    }
+  });
+  return acrPhrase;
+};
+console.log(acronym("British Broadcasting Corporation"));
